@@ -63,7 +63,7 @@
             margin-bottom: 40px;
         }
         
-        .image-section {
+        .video-section {
             flex: 1;
             min-width: 300px;
             max-width: 500px;
@@ -72,15 +72,25 @@
             align-items: center;
         }
         
-        .profile-video {
+        .video-container {
+            position: relative;
             width: 100%;
             border-radius: 15px;
+            overflow: hidden;
             box-shadow: 0 0 30px rgba(255, 0, 204, 0.5);
             transition: transform 0.3s ease;
+            aspect-ratio: 9/16;
         }
         
-        .profile-video:hover {
+        .video-container:hover {
             transform: scale(1.02);
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
         }
         
         .offer-section {
@@ -263,6 +273,10 @@
                 padding: 15px 30px;
                 font-size: 1.2rem;
             }
+            
+            .video-container {
+                max-width: 300px;
+            }
         }
         
         .countdown {
@@ -270,6 +284,13 @@
             color: #ff9900;
             margin: 15px 0;
             text-align: center;
+        }
+        
+        .video-alert {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #ff9900;
         }
     </style>
 </head>
@@ -281,11 +302,11 @@
         </header>
         
         <div class="main-content">
-            <div class="image-section">
-                <video class="profile-video" controls autoplay muted loop>
-                    <source src="images/video.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos HTML5.
-                </video>
+            <div class="video-section">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/lqvtn628kJo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="video-alert">Se o vídeo não aparecer, <a href="https://youtube.com/shorts/lqvtn628kJo?si=324mhEVu02OFynkD" style="color: #00ffff;" target="_blank">clique aqui para assistir</a></p>
             </div>
             
             <div class="offer-section">
@@ -348,7 +369,7 @@
     <script>
         // Função para redirecionar para o checkout
         function buyNow() {
-            window.location.href = "https://go.disruptybr.com.br/cwk4ja5fiz";
+            window.location.href = "https://go.disruptybr.com.br/yjhaxjfg0j";
         }
         
         // Contador regressivo para aumentar a urgência
@@ -395,5 +416,4 @@
         });
     </script>
 </body>
-
 </html>
